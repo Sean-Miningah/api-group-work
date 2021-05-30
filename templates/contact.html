@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/static/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="mylogo">
+        <img
+          src="/static/images/sam_logo.png"
+          width="50"
+          height="50"
+          alt="sam's logo"
+        />
+      </div>
+
+      <button class="nav-btn" aria-label="nav-button">
+        <span class="btn"></span>
+      </button>
+
+      <nav class="mynav">
+        <ul class="mynav_ls">
+          <li class="mynav_item">
+            <a href="{{url_for('home')}}" class="mynav_link">Home</a>
+          </li>
+          <li class="mynav_item">
+            <a href="{{url_for('home')}}" class="mynav_link">Creative Styles</a>
+          </li>
+          <li class="mynav_item">
+            <a href="{{url_for('home')}}" class="mynav_link">About Me</a>
+          </li>
+          <li class="mynav_item">
+            <a href="#{{url_for('home')}}" class="mynav_link">Art Projects</a>
+          </li>
+		  <li class="mynav_item">
+            <a href="#{{url_for('contact')}}" class="mynav_link">Contact me</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+	<div class="contact-detail">
+		<h2 class="contact">
+			Fill in the contact form below to help us answer any questions you may have
+		</h2>
+	</div>
+	
+
+    <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+      <div class="contact-input">
+        <input type="text" name="fname" placeholder="First name here ..." />
+      </div>
+      <div class="contact-input">
+        <input type="text" name="lname" placeholder="Second name here ..." />
+      </div>
+      <div class="contact-input">
+        <input
+          type="email"
+          name="email"
+          placeholder="Email address here ...."
+        />
+      </div>
+      <div class="contact-input">
+        <input
+          type="text"
+          name="msg"
+          placeholder="Please write your message here ..."
+        />
+      </div>
+      <div class="contact-input input-button">
+        <button class="form-btn" type="submit" /> Submit</button>
+      </div>
+    </form>
+
+    <footer class="footer">
+      <!--insert your own here-->
+      <a href="mailto:fort.smg@gmail.com" class="footer_link"
+        >fort.smg@gmail.com</a
+      >
+
+      <ul class="social_links">
+        <li class="socialitem">
+          <a class="socialitemlink" href="https://twitter.com"
+            ><i class="fab fa-twitter"></i> Twitter</a
+          >
+        </li>
+        <li class="socialitem">
+          <a class="socialitemlink" href="https://facebook.com"
+            ><i class="fab fa-facebook-square"></i> Facebook</a
+          >
+        </li>
+        <li class="socialitem">
+          <a class="socialitemlink:" href="https://instagram.com"
+            ><i class="fab fa-instagram-square"></i> Instagram</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>
